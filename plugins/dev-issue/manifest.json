@@ -1,0 +1,12 @@
+{
+  "$schema": "../../schema/manifest.schema.json",
+  "name": "dev-issue",
+  "version": "0.1.0",
+  "description": "Placeholder — fill in skill text.",
+  "author": "",
+  "tags": [],
+  "skill": {
+    "file": "SKILL.md",
+    "trigger": "TODO: describe when Claude should invoke this skill"
+  }
+}

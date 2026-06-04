@@ -1,0 +1,26 @@
+{
+  "$schema": "http://json-schema.org/draft-07/schema#",
+  "title": "Plugin Registry",
+  "type": "object",
+  "required": ["version", "plugins"],
+  "properties": {
+    "version": { "type": "string" },
+    "plugins": {
+      "type": "array",
+      "items": { "$ref": "#/definitions/PluginEntry" }
+    }
+  },
+  "definitions": {
+    "PluginEntry": {
+      "type": "object",
+      "required": ["name", "version", "description", "path"],
+      "properties": {
+        "name":        { "type": "string", "pattern": "^[a-z0-9-]+$" },
+        "version":     { "type": "string", "pattern": "^\\d+\\.\\d+\\.\\d+$" },
+        "description": { "type": "string" },
+        "path":        { "type": "string" },
+        "tags":        { "type": "array", "items": { "type": "string" } }
+      }
+    }
+  }
+}

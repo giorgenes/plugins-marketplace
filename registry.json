@@ -1,0 +1,13 @@
+{
+  "$schema": "./schema/registry.schema.json",
+  "version": "1",
+  "plugins": [
+    {
+      "name": "dev-issue",
+      "version": "0.1.0",
+      "description": "Placeholder — fill in skill text.",
+      "path": "plugins/dev-issue",
+      "tags": []
+    }
+  ]
+}
