@@ -24,7 +24,7 @@ Generate only the diagrams that are relevant to the issue. Skip any that add no 
 
 For each diagram:
 1. Write the Mermaid source to a temp file (e.g. `/tmp/<name>.mmd`)
-2. Export to SVG: `npx --yes @mermaid-js/mermaid-cli mmdc -i /tmp/<name>.mmd -o $CONTEXT_PATH/Projects/$0/diagrams/<name>.svg`
+2. Export to SVG: `npx --yes @mermaid-js/mermaid-cli -i /tmp/<name>.mmd -o $CONTEXT_PATH/Projects/$0/diagrams/<name>.svg`
 3. Delete the temp file
 
 ## Flowchart
