@@ -7,8 +7,8 @@
   },
   "plugins": [
     {
-      "name": "dev-issue",
-      "source": "./plugins/dev-issue",
+      "name": "sw-eng",
+      "source": "./plugins/sw-eng",
       "description": "Placeholder — fill in SKILL.md with your skill text."
     }
   ]
