@@ -10,7 +10,7 @@ A Claude Code plugin marketplace. Users add this marketplace once, then install 
 
 ```
 # Validate the marketplace and all plugins
-! /plugin validate .
+claude plugin validate .
 
 # (User-side) Add this marketplace
 /plugin marketplace add giorgenes/plugins-marketplace
@@ -43,6 +43,6 @@ plugins/<plugin-name>/
 ## Before commit
 
 Before commiting the code to git, make sure the following is met:
-- plugin is validated
+- plugin is validated: `claude plugin validate .`
 - README.md is updated to reflect any changes.
 
