@@ -8,9 +8,9 @@ A Claude Code plugin marketplace. Users add this marketplace once, then install 
 
 ## Key commands
 
-```bash
+```
 # Validate the marketplace and all plugins
-/plugin validate .
+! /plugin validate .
 
 # (User-side) Add this marketplace
 /plugin marketplace add giorgenes/plugins-marketplace

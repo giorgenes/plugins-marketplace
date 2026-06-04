@@ -18,9 +18,10 @@ Then install any plugin by name:
 
 ## Available plugins
 
-| Plugin | Description |
-|--------|-------------|
-| `sw-eng` | Placeholder — skill text coming soon. |
+| Plugin | Skill | Description |
+|--------|-------|-------------|
+| `sw-eng` | `close-issue` | Close a software development issue from start to finish. |
+| `sw-eng` | `understand` | Deeply understand a codebase, module, or piece of code. |
 
 ## Keeping up to date
 
