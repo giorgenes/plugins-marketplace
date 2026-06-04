@@ -13,14 +13,14 @@ Add this marketplace to Claude Code once:
 Then install any plugin by name:
 
 ```
-/plugin install dev-issue@giorgenes-plugins
+/plugin install sw-eng@giorgenes-plugins
 ```
 
 ## Available plugins
 
 | Plugin | Description |
 |--------|-------------|
-| `dev-issue` | Placeholder — skill text coming soon. |
+| `sw-eng` | Placeholder — skill text coming soon. |
 
 ## Repository structure
 
