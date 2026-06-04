@@ -8,7 +8,6 @@ params:
 1. Read the questions in @questions.md
 2. For each question, try to answer it from the context given.
 3. Generate diagrams (see below) and save them to the output folder.
-4. Validate the output: run `claude plugin validate .` from the marketplace root.
 
 
 # Output
