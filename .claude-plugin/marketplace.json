@@ -1,0 +1,15 @@
+{
+  "name": "giorgenes-plugins",
+  "description": "Community plugins by giorgenes for Claude Code.",
+  "owner": {
+    "name": "Giorgenes Gelatti",
+    "email": "giorgenes@gmail.com"
+  },
+  "plugins": [
+    {
+      "name": "dev-issue",
+      "source": "./plugins/dev-issue",
+      "description": "Placeholder — fill in SKILL.md with your skill text."
+    }
+  ]
+}
