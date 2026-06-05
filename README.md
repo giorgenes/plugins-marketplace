@@ -22,6 +22,7 @@ Then install any plugin by name:
 |--------|-------|-------------|
 | `sw-eng` | `close-issue` | Close a software development issue from start to finish. |
 | `sw-eng` | `understand` | Deeply understand a codebase, module, or piece of code. |
+| `brand-design` | `branding-questions` | Run a structured brand discovery interview covering purpose, audience, positioning, personality, voice, and visual direction. Saves a full brand brief to a local Markdown file. |
 
 ## Keeping up to date
 
