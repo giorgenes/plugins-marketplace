@@ -23,6 +23,8 @@ Then install any plugin by name:
 | `sw-eng` | `close-issue` | Close a software development issue from start to finish. |
 | `sw-eng` | `understand` | Deeply understand a codebase, module, or piece of code. |
 | `brand-design` | `branding-questions` | Run a structured brand discovery interview covering purpose, audience, positioning, personality, voice, and visual direction. Saves a full brand brief to a local Markdown file. |
+| `brand-design` | `visual-identity` | Translate a completed brand brief into a full visual identity system. Asks targeted design questions, then produces a `visual-identity.md` specification for designers and a standalone HTML brand showcase page. Run after `branding-questions`. |
+| `brand-design` | `color-scheme` | Visualize and pick colors interactively. Given colors, builds shareable URLs for realtimecolors.com (live site preview) and coolors.co (palette editor). Given a URL from either site, extracts the colors for use by other skills. |
 
 ## Keeping up to date
 
