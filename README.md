@@ -25,6 +25,8 @@ Then install any plugin by name:
 | `brand-design` | `branding-questions` | Run a structured brand discovery interview covering purpose, audience, positioning, personality, voice, and visual direction. Saves a full brand brief to a local Markdown file. |
 | `brand-design` | `visual-identity` | Translate a completed brand brief into a full visual identity system. Asks targeted design questions, then produces a `visual-identity.md` specification for designers and a standalone HTML brand showcase page. Run after `branding-questions`. |
 | `brand-design` | `color-scheme` | Visualize and pick colors interactively. Given colors, builds shareable URLs for realtimecolors.com (live site preview) and coolors.co (palette editor). Given a URL from either site, extracts the colors for use by other skills. |
+| `marketing` | `website-messaging` | Design the messaging architecture of a website — IA, copy hierarchy, and section-by-section copy direction. Produces a `website-messaging.md` a designer or copywriter can execute from directly. Run after `branding-questions`. |
+| `marketing` | `copy-guide` | Translate a brand brief into a practical copywriting guide — voice rules, tone by context, grammar preferences, "say this not that" examples, and CTA formulas. Produces a `copy-guide.md` any writer can use immediately. Run after `branding-questions`. |
 
 ## Keeping up to date
 
