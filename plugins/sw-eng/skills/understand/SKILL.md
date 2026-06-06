@@ -9,26 +9,26 @@ params:
 
 1. If the context mentions an issue ID, fetch the issue details from the relevant tracker (Linear, GitHub, Jira, etc.) and use that as additional context.
 2. Read the questions in @questions.md.
-3. For each question, answer it from the context given. Skip questions that are clearly irrelevant.
-4. Generate diagrams (see below) and save them alongside the FAQ.
+3. For each question, answer it from the context given. Skip questions that are clearly irrelevant or already answered.
+4. Generate `faq.md`: This should be a comprehensive FAQ for reference with the key information and decisions.
+5. Generate diagrams (see below) and save them alongside the FAQ.
 
 # Output
 
 Use the `path` param as the output directory. If no `path` was given, use the current directory (`.`).
 
-Save the FAQ to `<path>/faq.md`.
+- Save the FAQ to `<path>/faq.md`.
+- Save diagrams to `<path>/diagrams/`.
 
-Save diagrams to `<path>/diagrams/`.
-
-Do not invent a subfolder structure beyond what is specified above.
+DO NOT invent a subfolder structure beyond what is specified above.
 
 # Diagrams
 
 Generate only the diagrams that are relevant to the issue. Skip any that add no insight given the context.
 
 For each diagram:
-1. Write the Mermaid source to `$CONTEXT_PATH/Projects/$0/diagrams/<name>.mmd`
-2. Export to SVG: `npx --yes @mermaid-js/mermaid-cli -i $CONTEXT_PATH/Projects/$0/diagrams/<name>.mmd -o $CONTEXT_PATH/Projects/$0/diagrams/<name>.svg`
+1. Write the Mermaid source to `<path>/diagrams/<name>.mmd`
+2. Export to SVG: `npx --yes @mermaid-js/mermaid-cli -i <path>/diagrams/<name>.mmd -o <path>/diagrams/<name>.svg`
 
 ## Flowchart
 
