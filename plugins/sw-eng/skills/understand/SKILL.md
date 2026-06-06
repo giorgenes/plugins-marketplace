@@ -1,21 +1,26 @@
 ---
 description: Use this skill to deeply understand what needs to be done when given a task, issue or bug.
 params:
-  - name: issue-id
-    description: The issue id to understand.
+  - name: context
+    description: What to understand — a free-form description, an issue ID, a feature name, or any combination.
+  - name: path
+    description: Directory to save output. Defaults to the current directory if not provided.
 ---
 
-1. Read the questions in @questions.md
-2. For each question, try to answer it from the context given.
-3. Generate diagrams (see below) and save them to the output folder.
-
+1. If the context mentions an issue ID, fetch the issue details from the relevant tracker (Linear, GitHub, Jira, etc.) and use that as additional context.
+2. Read the questions in @questions.md.
+3. For each question, answer it from the context given. Skip questions that are clearly irrelevant.
+4. Generate diagrams (see below) and save them alongside the FAQ.
 
 # Output
 
-Save an md file with the answers in `$CONTEXT_PATH/Projects/$0/faq.md`
+Use the `path` param as the output directory. If no `path` was given, use the current directory (`.`).
 
-Save SVG diagrams to `$CONTEXT_PATH/Projects/$0/diagrams/`
+Save the FAQ to `<path>/faq.md`.
 
+Save diagrams to `<path>/diagrams/`.
+
+Do not invent a subfolder structure beyond what is specified above.
 
 # Diagrams
 
