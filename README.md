@@ -20,7 +20,7 @@ Then install any plugin by name:
 
 | Plugin | Skill | Description |
 |--------|-------|-------------|
-| `sw-eng` | `close-issue` | Close a software development issue from start to finish. |
+| `sw-eng` | `build` | Close a software development issue from start to finish. |
 | `sw-eng` | `understand` | Deeply understand a codebase, module, or piece of code. |
 | `brand-design` | `branding-questions` | Run a structured brand discovery interview covering purpose, audience, positioning, personality, voice, and visual direction. Saves a full brand brief to a local Markdown file. |
 | `brand-design` | `visual-identity` | Translate a completed brand brief into a full visual identity system. Asks targeted design questions, then produces a `visual-identity.md` specification for designers and a standalone HTML brand showcase page. Run after `branding-questions`. |

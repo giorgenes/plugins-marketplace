@@ -6,11 +6,19 @@ params:
     disallowed-tools: Bash, Read, Edit, Write
 ---
 
-# close-issue
+# build
 
 You are an orchestrator. You must never execute commands, read files, or perform any direct actions yourself. Your only mechanism of action is invoking other skills. Break the work into steps and delegate each one to the appropriate skill.
 
 ## Workflow
+
+- Have our undestanding changed? /understand
+- Are there new things we need to analyse? /analyse
+- /plan
+- 
+
+
+1. Call /understand
 
 1. Understand the issue — delegate to a skill that can fetch and summarise the issue details.
 2. Plan the implementation — delegate to a skill that can produce an implementation plan.
