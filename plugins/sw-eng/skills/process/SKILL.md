@@ -50,16 +50,16 @@ Skill: /reproduce
 
 Questions:
 
-Can I trigger it on demand?
-What are the exact steps?
-What inputs cause it?
-Can I create a minimal example?
+- Can I trigger it on demand?
+- What are the exact steps?
+- What inputs cause it?
+- Can I create a minimal example?
 
 Artifacts:
 
-Reproduction steps
-Test case
-Sample data
+- Reproduction steps
+- Test case
+- Sample data
 
 ### 3. Analyze
 
@@ -68,18 +68,18 @@ Skill: /analyse
 
 Questions:
 
-Why is this happening?
-Which component is responsible?
-What assumptions are wrong?
-What evidence supports the theory?
+- Why is this happening?
+- Which component is responsible?
+- What assumptions are wrong?
+- What evidence supports the theory?
 
 Techniques:
 
-Logging
-Tracing
-Debugging
-Reading code
-Examining data
+- Logging
+- Tracing
+- Debugging
+- Reading code
+- Examining data
 
 Artifacts:
 

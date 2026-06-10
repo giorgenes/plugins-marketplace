@@ -15,7 +15,7 @@ params:
 
 # Output
 
-Use the `path` param as the output directory. If no `path` was given, use the current directory (`.`).
+Use the `path_or_issue` param as the output directory. If no `path` was given, use the current directory (`.`).
 
 - Save the FAQ to `<path>/faq.md`.
 - Save diagrams to `<path>/diagrams/`.
