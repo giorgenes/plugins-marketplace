@@ -18,15 +18,33 @@ Then install any plugin by name:
 
 ## Available plugins
 
-| Plugin | Skill | Description |
-|--------|-------|-------------|
-| `sw-eng` | `process` | Close a software development issue from start to finish. |
-| `sw-eng` | `understand` | Deeply understand a codebase, module, or piece of code. |
-| `brand-design` | `branding-questions` | Run a structured brand discovery interview covering purpose, audience, positioning, personality, voice, and visual direction. Saves a full brand brief to a local Markdown file. |
-| `brand-design` | `visual-identity` | Translate a completed brand brief into a full visual identity system. Asks targeted design questions, then produces a `visual-identity.md` specification for designers and a standalone HTML brand showcase page. Run after `branding-questions`. |
-| `brand-design` | `color-scheme` | Visualize and pick colors interactively. Given colors, builds shareable URLs for realtimecolors.com (live site preview) and coolors.co (palette editor). Given a URL from either site, extracts the colors for use by other skills. |
-| `marketing` | `website-messaging` | Design the messaging architecture of a website — IA, copy hierarchy, and section-by-section copy direction. Produces a `website-messaging.md` a designer or copywriter can execute from directly. Run after `branding-questions`. |
-| `marketing` | `copy-guide` | Translate a brand brief into a practical copywriting guide — voice rules, tone by context, grammar preferences, "say this not that" examples, and CTA formulas. Produces a `copy-guide.md` any writer can use immediately. Run after `branding-questions`. |
+### `sw-eng`
+
+Skills for software engineering workflows, including closing issues from start to finish.
+
+| Skill | Description |
+|-------|-------------|
+| `process` | Close a software development issue from start to finish. |
+| `understand` | Deeply understand a codebase, module, or piece of code. |
+
+### `brand-design`
+
+Skills for brand design workflows: discovery interviews to define brand identity, and visual identity system generation for designers.
+
+| Skill | Description |
+|-------|-------------|
+| `branding-questions` | Run a structured brand discovery interview covering purpose, audience, positioning, personality, voice, and visual direction. Saves a full brand brief to a local Markdown file. |
+| `visual-identity` | Translate a completed brand brief into a full visual identity system. Asks targeted design questions, then produces a `visual-identity.md` specification for designers and a standalone HTML brand showcase page. Run after `branding-questions`. |
+| `color-scheme` | Visualize and pick colors interactively. Given colors, builds shareable URLs for realtimecolors.com (live site preview) and coolors.co (palette editor). Given a URL from either site, extracts the colors for use by other skills. |
+
+### `marketing`
+
+Marketing strategy skills — website messaging architecture and brand copy guides.
+
+| Skill | Description |
+|-------|-------------|
+| `website-messaging` | Design the messaging architecture of a website — IA, copy hierarchy, and section-by-section copy direction. Produces a `website-messaging.md` a designer or copywriter can execute from directly. Run after `branding-questions`. |
+| `copy-guide` | Translate a brand brief into a practical copywriting guide — voice rules, tone by context, grammar preferences, "say this not that" examples, and CTA formulas. Produces a `copy-guide.md` any writer can use immediately. Run after `branding-questions`. |
 
 ## Keeping up to date
 
