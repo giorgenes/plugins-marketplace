@@ -26,6 +26,7 @@ Skills for software engineering workflows, including closing issues from start t
 |-------|-------------|
 | `process` | Close a software development issue from start to finish. |
 | `understand` | Deeply understand a codebase, module, or piece of code. |
+| `reproduce` | Generate a reproduction script for a bug, based on the facts captured by the `understand` skill. |
 
 ### `brand-design`
 
