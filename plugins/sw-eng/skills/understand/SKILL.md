@@ -1,4 +1,5 @@
 ---
+name: understand
 description: Use this skill to deeply understand what needs to be done when given a task, issue or bug.
 params:
   - name: context
@@ -7,33 +8,41 @@ params:
     description: Directory to save output. Defaults to the current directory if not provided.
 ---
 
-1. If the context mentions an issue ID, fetch the issue details from the relevant tracker (Linear, GitHub, Jira, etc.) and use that as additional context.
+# Goal and focus
+
+The focus of this skill is to understand WHAT needs to be done, not HOW it should be done. It's the first step of the SDLC. Later skills will focus on
+reproducing, analysing, designing, etc.
+
+Restrict the understand process specific to understanding the WHAT's, WHY's, WHO's, etc.
+
+The issue description can give hints or directions of HOW's, but do not
+focus on that. Document it, understand it and move on.
+
+# Steps
+
+1. If the context mentions an issue ID, fetch the issue details from the relevant tracker (Linear, GitHub, Jira, etc.) and use that as context.
 2. Read the questions in @questions.md.
 3. For each question, answer it from the context given. Skip questions that are clearly irrelevant or already answered.
-4. Generate `faq.md`: This should be a comprehensive FAQ for reference with the key information and decisions.
-5. Generate diagrams (see below) and save them alongside the FAQ.
+4. Answer the questions as separate markdown notes under the folder `understand/<title>.md`. Each file name should give a clear indication of what information to find inside.
+5. Generate diagrams (see below) and save them inside `understand/`.
 
 # Output
 
-Use the `path_or_issue` param as the output directory. If no `path` was given, use the current directory (`.`).
-
-- Save the FAQ to `<path>/faq.md`.
-- Save diagrams to `<path>/diagrams/`.
+Use `path` param as `<path>/understand` as the output directory. If no `path` was given, use the current directory (`.`).
 
 DO NOT invent a subfolder structure beyond what is specified above.
 
-# Diagrams
+# Diagrams Generation
 
 Generate only the diagrams that are relevant to the issue. Skip any that add no insight given the context.
 
 For each diagram:
-1. Write the Mermaid source to `<path>/diagrams/<name>.mmd`
-2. Export to SVG: `npx --yes @mermaid-js/mermaid-cli -i <path>/diagrams/<name>.mmd -o <path>/diagrams/<name>.svg`
+- Write the Mermaid source to `<path>/understand/<name>.mmd`
 
 ## Flowchart
 
 The main process or business logic flow. Include decision points and branching paths.
-Covers the happy path and the most important edge cases identified in the FAQ.
+Covers the happy path and the most important edge cases identified in the questions.
 
 ```
 flowchart TD
@@ -75,3 +84,7 @@ Use this for user-facing features.
 ```
 journey
 ```
+
+# DO's and DON'Ts
+
+-

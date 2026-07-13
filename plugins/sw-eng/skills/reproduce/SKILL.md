@@ -1,14 +1,37 @@
 ---
-description: Use this skill to generate a reproduction script for a bug or problem, based on the understanding captured in faq.md.
+name: reproduce
+description: Use this skill to generate a reproduction script for a bug or issue, based on the understanding captured under `understand/`.
 params:
   - name: path
-    description: Directory containing faq.md (output from the `understand` skill). Defaults to the current directory if not provided.
+    description: Directory containing the `understand/*.md` notes (output from the `understand` skill). Defaults to the current directory if not provided.
 ---
 
-1. Read `<path>/faq.md`. If it does not exist, tell the user to run the `understand` skill first and stop.
+# Steps
+
+1. Read `<path>/understand/*.md`. If it does not exist, tell the user to run the `understand` skill first and stop.
 2. Analyze the facts to determine the problem type and the right reproduction approach (see **Choosing a script** below).
-3. Generate the script and save it to `<path>/reproduce.<ext>`.
-4. Write a short `<path>/reproduce.md` that explains: what the script does, how to run it, and what the expected (broken) output looks like vs. what correct output would look like.
+3. Generate the script(s) and save it to `<path>/reproduce/<task>.<ext>`.
+4. Write a short `<path>/reproduce/instructions.md` that explains: what the script(s) do(es), how to run it, and what the expected (broken) output looks like vs. what correct output would look like.
+
+# Bugs vs Features
+
+If the issue type is a bug, focus on reproducing the bug.
+If the issue type is a new feature or change, focus on reproducing existing functionality or making steps that lead up to it.
+
+## Examples
+
+- *Adding a new UI feature*: the reproduce script should lead up to the screen where the feature should be.
+- *Adding new APIs*: the reproduce script should call similar apis or functionality via the UI.
+- *Fixing a bug*: the script should reproduce the bug
+
+# Purpose
+
+The purpose of the reproduce script is one of either:
+a) reproduce a specific behaviour like a bug
+b) reproduce an existing behaviour that needs to be expanded or changed
+c) lead up to a place where change needs to happen
+
+This should include manually setting up the data as needed.
 
 # Choosing a script
 
@@ -35,15 +58,18 @@ Do not limit yourself to this list — use whatever tool best reproduces the pro
 - Add a `# Usage:` comment showing exactly how to run it.
 - Target the **minimal input** that triggers the bug. Remove all unrelated steps.
 - Include clear `echo` / `print` / `console.log` statements so the person running it can see: what it sent, what it got back, and what was wrong about the response.
-- If credentials or environment variables are required, read them from env vars (never hardcode secrets). Document each with a comment.
+- If credentials or environment variables are required, embed it in the script but allow to override with env vars. Document each with a comment. These are throw away local scripts so security isn't a concern.
 - If the bug requires a specific data state (e.g. a database record), include setup and teardown steps inside the script.
 
 # Output
 
-Use `path` as the output directory. If no `path` was given, use the current directory (`.`).
+Use `<path>/reproduce/` as the output directory. If no `path` was given, use the current directory (`.`).
 
-- Save the script to `<path>/reproduce.<ext>` (choose the correct extension for the language: `.sh`, `.py`, `.js`, `.ts`).
-- Save the explanation to `<path>/reproduce.md`.
-- Make the script executable if it is a shell script: `chmod +x <path>/reproduce.sh`.
+- Save the script to `<path>/reproduce/<script>.<ext>` (choose the correct extension for the language: `.sh`, `.py`, `.js`, `.ts`).
+- Save the explanation to `<path>/reproduce/instructions.md`.
+- Make the script executable if it is a shell script (`chmod +x`).
 
-DO NOT create any other files or subdirectories.
+# Other notes and rules
+
+- DO NOT create any other files or subdirectories.
+- DO NOT try to implement the requirements or find root cause.

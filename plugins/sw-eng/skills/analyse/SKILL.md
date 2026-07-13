@@ -1,12 +1,13 @@
 ---
-description: Use this skill to find the root cause of a bug, based on faq.md and reproduce.md from previous skills.
+name: analyse
+description: Use this skill to find the root cause of a bug, or understand how a feature to be implemented works. 
 params:
   - name: path
     description: Directory containing faq.md and reproduce.md (outputs from the `understand` and `reproduce` skills). Defaults to the current directory if not provided.
 ---
 
-1. Read `<path>/faq.md`. If it does not exist, tell the user to run the `understand` skill first and stop.
-2. Read `<path>/reproduce.md`. If it does not exist, tell the user to run the `reproduce` skill first and stop.
+1. Read `<path>/understand/*.md`. If it does not exist, tell the user to run the `understand` skill first and stop.
+2. Read `<path>/reproduce/instructions.md`. If it does not exist, tell the user to run the `reproduce` skill first and stop.
 3. Answer the **Root cause questions** below using the techniques listed, then write the outputs.
 
 # Root cause questions
