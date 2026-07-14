@@ -73,3 +73,4 @@ Use `<path>/reproduce/` as the output directory. If no `path` was given, use the
 
 - DO NOT create any other files or subdirectories.
 - DO NOT try to implement the requirements or find root cause.
+- Read `${CLAUDE_PLUGIN_PATH}/shared/rules.md` and follow those rules too.

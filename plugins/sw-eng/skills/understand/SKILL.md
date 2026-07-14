@@ -85,6 +85,6 @@ Use this for user-facing features.
 journey
 ```
 
-# DO's and DON'Ts
+# Rules
 
--
+Read `${CLAUDE_PLUGIN_PATH}/shared/rules.md` and follow those rules too.
