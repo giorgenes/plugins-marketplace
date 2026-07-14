@@ -29,6 +29,7 @@ Skills for software engineering workflows, including closing issues from start t
 | `reproduce` | Generate a reproduction script for a bug, based on the facts captured by the `understand` skill. |
 | `analyse` | Find the root cause of a bug — answers why it happens, which component is responsible, and what evidence supports the theory. Produces a root cause analysis and architecture notes. Run after `reproduce`. |
 | `design` | Decide what should be built — explores solutions, evaluates trade-offs, and picks the simplest approach that fits the architecture. Produces a design document, diagrams, API contracts, and data model changes. Run after `analyse`. |
+| `test-plan` | Generate an end-to-end test plan for an issue, bug, or feature. Produces a `test/plan.md` with manually executable test scenarios. Run after `design`. |
 
 ### `brand-design`
 
